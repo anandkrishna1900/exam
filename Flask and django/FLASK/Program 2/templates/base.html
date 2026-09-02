@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}My Site{% endblock %}</title>
+    <!-- Load Bootstrap's CSS via the extension -->
+    {{ bootstrap.load_css() }}
+</head>
+<body>
+    <!-- Shared navigation bar (appears on every page) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="/">BCA Flask App</a>
+            <div class="navbar-nav">
+                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/about">About</a>
+            </div>
+        </div>
+    </nav>
+    <!-- The part that changes from page to page -->
+    <main class="container mt-4">
+        {% block content %}{% endblock %}
+    </main>
+    <!-- Shared footer -->
+    <footer class="container mt-5 text-center text-muted">
+        <hr>
+        <p>&copy; 2026 MG University</p>
+    </footer>
+    {{ bootstrap.load_js() }}
+</body>
+</html>

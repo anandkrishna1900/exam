@@ -1,0 +1,6 @@
+
+Flask and django/Django/Scan documents20260902_190534.pdf
+*.pdf
+__pycache__/
+*.pyc
+

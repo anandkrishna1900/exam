@@ -1,0 +1,11 @@
+<h1>Posts</h1>
+<p>Logged in as: {{ user.username }}</p>
+<a href="{% url 'post_add' %}">+ Add Post</a>
+<ul>
+{% for post in posts %}
+    <li>{{ post.title }} — by {{ post.author.username }}</li>
+{% empty %}
+    <li>No posts yet.</li>
+{% endfor %}
+</ul>
+<p><a href="{% url 'home' %}">Home</a></p>

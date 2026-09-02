@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+    <h1 class="text-primary">Welcome, {{ user }}!</h1>
+    <p class="lead">Here are your courses:</p>
+    <ul class="list-group">
+        {% for course in items %}
+            <li class="list-group-item">{{ loop.index }}. {{ course }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/about" class="btn btn-success mt-3">Go to About</a>
+{% endblock %}
