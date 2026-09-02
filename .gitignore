@@ -1,6 +1,20 @@
+# Python Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
 
-Flask and django/Django/Scan documents20260902_190534.pdf
-*.pdf
+# Byte-compiled / optimized / cache files
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+*.coverage
 
+# Database and large files
+*.sqlite3
+*.pdf
+
+# Environment variables
+.env
