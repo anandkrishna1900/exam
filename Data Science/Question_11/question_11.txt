@@ -1,0 +1,11 @@
+# 11. Import and Export Data into and from CSV File in R
+
+students <- data.frame(
+  ID = c(1, 2, 3),
+  Name = c("John", "Alice", "Bob"),
+  Marks = c(85, 90, 78)
+)
+
+write.csv(students, "output.csv", row.names = FALSE)
+df <- read.csv("output.csv", header = TRUE)
+print(df)

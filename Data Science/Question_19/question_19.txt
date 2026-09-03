@@ -1,0 +1,29 @@
+# 19. Implementation of multiple linear regression in R
+
+# Multiple linear regression
+input <- mtcars[, c("mpg", "disp", "hp", "wt")]
+print(head(input))
+
+# Create the relationship model
+model <- lm(mpg ~ disp + hp + wt, data = input)
+print(model)
+
+cat("# # # # The Coefficient Values # # # \n")
+a <- coef(model)[1]
+print(a)
+Xdisp <- coef(model)[2]
+Xhp <- coef(model)[3]
+Xwt <- coef(model)[4]
+print(Xdisp)
+print(Xhp)
+print(Xwt)
+
+# New car data
+new_car <- data.frame(
+  disp = 221,
+  hp = 102,
+  wt = 2.91
+)
+
+predicted_mpg <- predict(model, newdata = new_car)
+print(predicted_mpg)

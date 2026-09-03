@@ -1,0 +1,8 @@
+# 8. Print the multiplication table of 5 using a for loop.
+
+num <- 5 # Table of 5
+cat("Multiplication Table of", num, "\n")
+for (i in 1:10) {
+  result <- num * i
+  cat(num, "x", i, "=", result, "\n")
+}

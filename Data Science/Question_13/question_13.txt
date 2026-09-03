@@ -1,0 +1,17 @@
+# 13. Import and Export Data into and from Excel File in R
+
+install.packages("readxl")
+install.packages("openxlsx")
+library(readxl)
+library(openxlsx)
+
+students <- data.frame(
+  ID = c(1, 2, 3),
+  Name = c("John", "Alice", "Bob"),
+  Marks = c(85, 90, 78)
+)
+
+write.xlsx(students, "people.xlsx")
+
+data <- as.data.frame(read_excel("people.xlsx"))
+print(data)

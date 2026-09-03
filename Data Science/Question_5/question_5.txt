@@ -1,0 +1,8 @@
+# Ex. No: 5 - To write an R program to find the number of characters in a string and also find its uppercase and lowercase.
+
+word <- "DataScience"
+upper <- toupper(word)
+lower <- tolower(word)
+cat("Uppercase:", upper, "\n")
+cat("Lowercase:", lower, "\n")
+cat("Length of string:", nchar(word), "\n")

@@ -1,0 +1,33 @@
+# 9. Define 2 numbers. Perform all arithmetic operations in R
+
+# Define two numbers
+a <- 15
+b <- 4
+
+# Addition
+addition <- a + b
+cat("Addition: ", a, "+", b, "=", addition, "\n")
+
+# Subtraction
+subtraction <- a - b
+cat("Subtraction: ", a, "-", b, "=", subtraction, "\n")
+
+# Multiplication
+multiplication <- a * b
+cat("Multiplication: ", a, "*", b, "=", multiplication, "\n")
+
+# Division
+division <- a / b
+cat("Division: ", a, "/", b, "=", division, "\n")
+
+# Integer Division
+int_division <- a %/% b
+cat("Integer Division: ", a, "%/%", b, "=", int_division, "\n")
+
+# Modulus (remainder)
+modulus <- a %% b
+cat("Modulus: ", a, "%%", b, "=", modulus, "\n")
+
+# Exponentiation
+power <- a ^ b
+cat("Exponentiation: ", a, "^", b, "=", power, "\n")
