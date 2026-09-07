@@ -55,10 +55,10 @@ for folder in folders:
         print(f"Skipping {folder}: dependencies already installed.")
         continue
 
-    python_bin = venv_path / "Scripts" / "python.exe"
+    venv_python = venv_path / "Scripts" / "python.exe"
 
     subprocess.run([
-        str(python_bin), "-m", "pip", "install",
+        str(venv_python), "-m", "pip", "install",
         "--no-index", "--find-links", str(CACHE_DIR),
         *PACKAGES,
     ], check=True)

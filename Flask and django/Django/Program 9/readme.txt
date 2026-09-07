@@ -30,9 +30,7 @@ HOW TO RUN:
 6. Open your browser and navigate to:
    - Admin Panel: http://127.0.0.1:8000/admin/
    
-   Default / Seeded Credentials (or use your own created above):
-   - Username: admin
-   - Password: admin123
+   Log in using the Username and Password you created in Step 4.
 
 KEY FILES:
 ----------
