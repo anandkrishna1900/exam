@@ -1,0 +1,7 @@
+Flask Program 5 - Run instructions
+
+  .\venv\Scripts\Activate.ps1
+  python run.py
+
+If run.py is not available, use: python app.py
+Open the URL shown in the terminal and stop with Ctrl+C.

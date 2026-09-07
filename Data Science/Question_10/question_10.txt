@@ -1,0 +1,12 @@
+# 10. Write an R script to concatenate 2 strings.
+
+first_name <- "John"
+last_name <- "Doe"
+
+# With space
+full_name <- paste(first_name, last_name)
+cat("Full Name (with space):", full_name, "\n")
+
+# Without space
+username <- paste0(first_name, last_name)
+cat("Username (no space):", username, "\n")

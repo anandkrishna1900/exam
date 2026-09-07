@@ -1,0 +1,7 @@
+# Ex. No: 3 - To write an R program to create a list named student with name, age and scores of 3 subjects, access the list elements and find the average score.
+
+student <- list(name = "John", age = 22, scores = c(88, 90, 85))
+student$name
+student$age
+student$scores
+mean(student$scores)

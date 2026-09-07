@@ -1,0 +1,8 @@
+Flask Program 1 - Run instructions
+
+Open PowerShell in this folder, then run:
+  .\venv\Scripts\Activate.ps1
+  python app.py
+
+Open the URL shown in the terminal (usually http://127.0.0.1:5000/).
+Stop the server with Ctrl+C.

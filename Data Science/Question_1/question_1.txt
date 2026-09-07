@@ -1,0 +1,13 @@
+# Ex. No: 1 - To write an R program to find the largest number among 3 numbers.
+
+a <- 10
+b <- 25
+c <- 15
+big <- a
+if (b > big) {
+  big <- b
+}
+if (c > big) {
+  big <- c
+}
+cat("The largest number is:", big)

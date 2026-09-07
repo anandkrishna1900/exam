@@ -1,0 +1,45 @@
+# 6. Consider a CSV file named marks2.csv. Read the CSV file and perform the following:
+# a) Display the first few rows.
+# b) Display the structure of the dataframe.
+# c) Perform summary statistics.
+# d) Display the column names.
+# e) Display the number of rows and columns.
+# f) Access a specific column.
+# g) Display the average value of a column.
+# h) Display the median value of a column.
+# i) Display the standard deviation of a column.
+# j) Display the range of a column.
+
+# Read the CSV file
+data <- read.csv("marks2.csv")
+
+# a) Display the first few rows
+head(data)
+
+# b) Display the structure of the dataframe
+str(data)
+
+# c) Perform summary statistics
+summary(data)
+
+# d) Display the column names
+names(data)
+
+# e) Display the number of rows and columns
+nrow(data)
+ncol(data)
+
+# f) Access a specific column
+data$Biology
+
+# g) Display the average value of a column
+mean(data$Biology, na.rm = TRUE)
+
+# h) Display the median value of a column
+median(data$Maths, na.rm = TRUE)
+
+# i) Display the standard deviation of a column
+sd(data$Physics, na.rm = TRUE)
+
+# j) Display the range of a column
+range(data$Physics, na.rm = TRUE)

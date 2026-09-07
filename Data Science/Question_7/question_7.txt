@@ -1,0 +1,21 @@
+# 7. Consider a CSV file called Sales_by_Region.csv with the following data. Draw a Pie chart using the given data.
+# Region,Sales
+# North,15000
+# South,10000
+# East,8000
+# West,12000
+# Central,5000
+
+# Read the CSV file
+sales <- read.csv("Sales_by_Region.csv")
+
+pie(sales$Sales, labels = sales$Region,
+    main = "Sales Distribution by Region",
+    col = rainbow(length(sales$Sales)))
+
+pct <- round(sales$Sales / sum(sales$Sales) * 100)
+labels <- paste(sales$Region, "-", pct, "%")
+
+pie(sales$Sales, labels = labels,
+    main = "Sales Distribution by Region",
+    col = rainbow(length(sales$Sales)))

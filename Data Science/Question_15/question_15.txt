@@ -1,0 +1,15 @@
+# 15. Implement data visualization in R using box and whiskers plot
+
+# Box plot
+scores <- c(65, 70, 75, 80, 85, 90, 95, 100, 105, 110)
+boxplot(scores, main = "Score Distribution", ylab = "Scores",
+        col = "skyblue", border = "red", notch = TRUE)
+
+# Multiple Boxplots (Grouped Data)
+math <- c(60, 65, 70, 75, 80)
+science <- c(68, 72, 74, 76, 85)
+english <- c(55, 60, 65, 70, 75)
+scores <- list(Math = math, Science = science, English = english)
+boxplot(scores, main = "Scores by Subject",
+        col = c("red", "green", "blue"),
+        ylab = "Marks")

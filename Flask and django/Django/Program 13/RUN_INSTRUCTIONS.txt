@@ -1,0 +1,7 @@
+Django Program 13 - Run instructions
+
+  .\venv\Scripts\Activate.ps1
+  python manage.py migrate
+  python manage.py runserver
+
+Open http://127.0.0.1:8000/ and stop with Ctrl+C.
