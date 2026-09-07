@@ -20,13 +20,17 @@ HOW TO RUN:
    python manage.py makemigrations
    python manage.py migrate
 
-4. Start the Django development server:
+4. Create your own admin account:
+   python manage.py createsuperuser
+   - Enter your desired Username, Email, and Password when prompted.
+
+5. Start the Django development server:
    python manage.py runserver
 
-5. Open your browser and navigate to:
+6. Open your browser and navigate to:
    - Admin Panel: http://127.0.0.1:8000/admin/
    
-   Admin Credentials:
+   Default / Seeded Credentials (or use your own created above):
    - Username: admin
    - Password: admin123
 

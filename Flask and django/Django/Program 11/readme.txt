@@ -16,13 +16,17 @@ HOW TO RUN:
 2. Activate the virtual environment:
    .\venv\Scripts\Activate.ps1
 
-3. Start the development server:
+3. Create your own admin account:
+   python manage.py createsuperuser
+   - Enter your desired Username, Email, and Password (along with any custom user fields if prompted).
+
+4. Start the development server:
    python manage.py runserver
 
-4. Open your browser and navigate to:
+5. Open your browser and navigate to:
    - Admin Panel: http://127.0.0.1:8000/admin/
 
-   Admin Credentials:
+   Default Credentials (or use your newly created account):
    - Username: admin
    - Password: admin123
 
