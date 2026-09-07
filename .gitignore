@@ -11,6 +11,32 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.coverage
+.coverage.*
+htmlcov/
+
+# Local dependency download cache
+.pip-cache/
+
+# Build and packaging output
+build/
+dist/
+*.egg-info/
+
+# Test and tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Editors and operating-system files
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Logs and local configuration
+*.log
+*.local
 
 # Database and large files
 *.sqlite3
