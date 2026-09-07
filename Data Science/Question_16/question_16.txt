@@ -1,0 +1,41 @@
+# 16. Implement data visualization using bar chart
+
+# Bar Chart
+values <- c(25, 40, 35, 50)
+categories <- c("A", "B", "C", "D")
+colors <- c("red", "blue", "green", "orange")
+barplot(values,
+        names.arg = categories,
+        col = colors,
+        main = "Category-wise Values",
+        xlab = "Categories",
+        ylab = "Values",
+        border = "black")
+
+# Grouped Bar Chart
+quarters <- c("Q1", "Q2", "Q3", "Q4")
+fruits <- c(100, 120, 150, 50)
+vegetables <- c(80, 95, 110, 175)
+grocery <- c(120, 135, 140, 75)
+data_matrix <- rbind(fruits, vegetables, grocery)
+colors <- c("red", "green", "blue")
+barplot(data_matrix,
+        beside = TRUE,
+        names.arg = quarters,
+        col = colors,
+        main = "Sales by Quarter and Category",
+        xlab = "Quarter",
+        ylab = "Sales",
+        border = "black")
+legend("topleft", legend = rownames(data_matrix), fill = colors)
+
+# Stacked Bar Chart
+barplot(data_matrix,
+        beside = FALSE,
+        names.arg = quarters,
+        col = colors,
+        main = "Sales by Quarter and Category",
+        xlab = "Quarter",
+        ylab = "Sales",
+        border = "black")
+legend("topleft", legend = rownames(data_matrix), fill = colors)

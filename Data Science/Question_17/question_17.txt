@@ -1,0 +1,9 @@
+# 17. Implementation of data visualization using histogram
+
+scores <- c(45, 50, 55, 60, 62, 65, 67, 70, 72, 75, 78, 80, 82, 85, 88, 90, 
+            92, 95, 68, 74, 58, 63, 77, 81, 69, 73, 84, 87, 91, 96)
+
+# Create Histogram
+hist(scores, main = "Distribution of Student Exam Scores",
+     xlab = "Marks", ylab = "Number of Students",
+     col = "lightblue", border = "black")

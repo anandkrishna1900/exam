@@ -1,0 +1,5 @@
+# Ex. No: 4 - To write an R program to extract a substring from a string.
+
+text <- "Programming"
+sub_part <- substr(text, 4, 7)
+cat("Substring:", sub_part, "\n")
