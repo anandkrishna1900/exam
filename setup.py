@@ -1,4 +1,4 @@
-﻿import subprocess
+import subprocess
 from pathlib import Path
 
 ROOT_DIR = Path(__file__).parent
@@ -55,13 +55,15 @@ for folder in folders:
         print(f"Skipping {folder}: dependencies already installed.")
         continue
 
-    pip = venv_path / "Scripts" / "pip.exe"
+    python_bin = venv_path / "Scripts" / "python.exe"
 
     subprocess.run([
-        str(pip), "install",
+        str(python_bin), "-m", "pip", "install",
         "--no-index", "--find-links", str(CACHE_DIR),
         *PACKAGES,
     ], check=True)
+
+    install_marker.touch()
 
 print("All environments created successfully.")
 
