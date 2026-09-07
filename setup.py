@@ -1,8 +1,17 @@
-import os
 import subprocess
 from pathlib import Path
 
 ROOT_DIR = Path(__file__).parent
+CACHE_DIR = ROOT_DIR / ".pip-cache"
+
+PACKAGES = [
+    "Flask", "Django", "Flask-WTF",
+    "email-validator", "Flask-SQLAlchemy",
+    "Flask-Migrate", "Flask-Mail",
+    "Flask-HTTPAuth", "asgiref",
+    "gunicorn", "python-dotenv",
+    "sqlparse", "tzdata", "whitenoise",
+]
 
 folders = [
     r"Flask and django\FLASK\Program 1",
@@ -22,6 +31,16 @@ folders = [
     r"Flask and django\Django\Program 15",
 ]
 
+# Download packages once. All environments below install from this local cache,
+# so rerunning this script does not repeatedly download from the internet.
+CACHE_DIR.mkdir(parents=True, exist_ok=True)
+if not any(CACHE_DIR.iterdir()):
+    subprocess.run([
+        "python", "-m", "pip", "download",
+        "--dest", str(CACHE_DIR),
+        *PACKAGES,
+    ], check=True)
+
 for folder in folders:
     path = ROOT_DIR / folder
     path.mkdir(parents=True, exist_ok=True)
@@ -35,12 +54,8 @@ for folder in folders:
 
     subprocess.run([
         str(pip), "install",
-        "Flask", "Django", "Flask-WTF",
-        "email-validator", "Flask-SQLAlchemy",
-        "Flask-Migrate", "Flask-Mail",
-        "Flask-HTTPAuth", "asgiref",
-        "gunicorn", "python-dotenv",
-        "sqlparse", "tzdata", "whitenoise"
+        "--no-index", "--find-links", str(CACHE_DIR),
+        *PACKAGES,
     ], check=True)
 
 print("All environments created successfully.")
