@@ -26,9 +26,7 @@ HOW TO RUN:
 5. Open your browser and navigate to:
    - Admin Panel: http://127.0.0.1:8000/admin/
 
-   Default Credentials (or use your newly created account):
-   - Username: admin
-   - Password: admin123
+   Log in using the Username and Password you created in the step above.
 
 5. Inspect the Users section in admin to view custom fields (phone, address, age).
 
