@@ -16,6 +16,11 @@ HOW TO RUN:
 2. Activate the virtual environment:
    .\venv\Scripts\Activate.ps1
 
+   * NOTE: If you get an error like "cannot be loaded because running scripts
+     is disabled on this system" (ExecutionPolicy error), run this command once
+     in PowerShell and retry:
+     Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
 3. Create your own admin account:
    python manage.py createsuperuser
    - Enter your desired Username, Email, and Password (along with any custom user fields if prompted).
