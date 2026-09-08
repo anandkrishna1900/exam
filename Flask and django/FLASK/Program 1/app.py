@@ -8,7 +8,7 @@ def about():
     return "About Page"
 @app.route('/user/<name>')
 def greet_user(name):
-    return f'Hello {name}!'
+    return f'Hello, {name}!'
 @app.route('/square/<int:number>')
 def square(number):
     return f'The square of {number} is {number*number}'
